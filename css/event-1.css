@@ -1,0 +1,175 @@
+body{
+  background-image: url(../assets/images/flower.jpg);
+  font-family: 'Libre Caslon Text', serif;
+}
+/*WEDDING BANNER START*/
+.wedding-banner 
+{
+  background-image: url('../assets/images/wedding-banner.webp');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+  
+.wedding-banner-text 
+{
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  text-align: center;
+  color: #fff; 
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 2;
+  justify-content: center;
+  max-width: 400px;
+  font-size: large;
+  margin-left: 50vh;
+}
+/*WEDDING BANNER END*/
+
+/*WEDDING INTRO START*/
+.wedding-intro-section
+{
+  text-align: center;
+  padding: 60px 0;
+  margin-top: 30vh;
+  margin-bottom: 50vh; 
+
+}
+.wedding-content h2
+{
+  margin-left: 10px;
+  font-size: 50px;
+  font-weight: bold;
+  color: #2e382e;
+  margin-bottom: 100px;   
+  letter-spacing: 5px; 
+  
+}
+
+.wedding-content p
+{
+  font-size: 30px;
+  line-height: 1.5;
+  color: #666;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+/*WEDDING INTRO END*/
+
+/*WEDDING VENDOR HEADER START*/
+.heading
+{
+  padding-bottom: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.heading h1
+{
+  font-size: 50px;
+  color: #2e382e;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+/*WEDDING VENDOR HEADER END*/
+
+/*WEDDING VENDOR START*/
+.vendor .box-container
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  }
+  
+.vendor .box-container .box
+{
+  flex:1 1 30rem;
+  margin:1rem;
+  overflow: hidden;
+  position: relative;
+  border-radius: .5rem;
+  box-shadow:0 .5rem 1rem rgba(0,0,0,.9);
+  height: 25rem;
+  cursor: pointer;
+}
+
+.vendor .box-container .box img
+{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.vendor .box-container .box .info
+{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top:0; left: 0;
+  height: 100%;
+  width: 100%;
+  background:rgba(255,255,255,0.8);
+  text-align: center;
+  transform: scale(1.3);
+  opacity: 0;
+}
+
+.vendor .box-container .box:hover .info
+{
+  transform: scale(1);
+  opacity: 1;
+}
+
+.vendor .box-container .box:hover img
+{
+  transform: scale(1.3);
+}
+
+.vendor .box-container .box .info h3
+{
+  font-size: 3rem;
+  color: #000;
+}
+
+.vendor .box-container .box .info p
+{
+  font-size: 1.7rem;
+  color:#333;
+  padding:1rem;
+}
+
+.vendor .box-container .box .info .btn
+{
+  display: inline-block;
+  margin-top: 1rem;
+  border:.2rem solid var(--black);
+  color:var(--black);
+  font-size: 1.7rem;
+  padding:.5rem 2rem;
+  cursor: pointer;
+  background: none;
+  border: 2px solid;
+  text-decoration: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.vendor .box-container .box .info .btn:hover{
+  background: rgb(208, 71, 94);
+  border-color: rgb(208, 71, 94);
+  color:#fff;
+}
+/*WEDDING VENDOR END*/
+
+
