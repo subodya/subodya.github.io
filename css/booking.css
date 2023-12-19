@@ -1,0 +1,265 @@
+.booking-body
+{
+    font-family: 'Libre Caslon Text', serif;
+}
+/*Booking Form Start*/
+/* Set a background image for the body */
+.booking-body 
+{
+    background-image: url('../assets/images/main_3.webp');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Libre Caslon Text', serif;
+    color: #000;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the booking container */
+
+.step-container{
+    margin: 200px auto 100px;
+    background-image: url(../assets/images/bookin-art.jpg);
+    background-size: cover  ;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Optionally, you can set a background color */
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    position: relative;
+}
+.form-1
+{
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: auto;
+}
+.form-2 {
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: auto;
+}
+
+
+.input-box {
+    flex: 1;
+    margin: 10px;
+}
+
+.details {
+    font-weight: bold;
+}
+
+input[type="datetime-local"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #897354;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.book_btn 
+{
+
+    margin-top: 63vh;
+    margin-left: 20vh;
+}
+
+input[type="submit"]
+{ 
+    color: #000;
+    padding: 10px 20px;
+    border: 1.5px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover 
+{
+    background-color: #897354;
+}
+
+/*First Stage Start*/
+
+
+.step-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #22025d;
+    padding: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #897354;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: border-color 0.3s;
+}
+
+.form-input:focus {
+    border-color: #897354;
+}
+
+    /*  button styles start */
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button-prev {
+    background-color: #897354;
+    color: #000;
+    padding: 5px 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    
+}
+.button-prev:hover {
+    color: #fff;
+}
+
+.button-next 
+{
+    color: #000;
+    letter-spacing: 1.5px;
+    padding: 5px 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #897354;
+}
+
+
+.button-next:hover {
+    color: #fff;
+}
+
+    /*  button styles end */
+
+/*First Stage End*/
+/*Second Stage Start*/
+.form-2 .step-header {
+    white-space: nowrap;
+    margin-left: -80px; /* Adjust the left margin as needed */
+}
+.room-checkboxes {
+    display: flex;
+    flex-direction: column;
+}
+
+.room-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.room-checkbox-input {
+    margin-right: 8px;
+}
+
+.room-input {
+    display: none;
+    margin-left: 10vh;
+    max-width: fit-content;
+}
+#deluxeQueenInput {
+    margin-left: 12.5vh;
+}
+#honeymoonSuiteInput {
+    margin-left: 8.5vh;
+}
+/* Show input when checkbox is checked */
+.room-checkbox-input:checked + .room-checkbox-label + .room-input {
+    display: block;
+}
+
+
+/*Second Stage End*/
+
+
+/*Third Stage Start*/
+.form-3 .step-header {
+    width: auto; 
+}
+/*Third Stage End*/
+
+/*Fourth Stage Start*/
+.form-4 {
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: auto;
+}
+
+#cardNumber,
+#expirationDate,
+#cvv {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #897354;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+/* Adjust styling for the payment form */
+.form-4 .step-header {
+    white-space: nowrap;
+    margin-left: -60px; 
+}
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.short-input {
+    width: 100px !important; /* Adjust the width as needed */
+}
+/*Form End Book now button*/
+.button-book-now {
+    color: #000;
+    padding: 5px 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #897354;
+}
+.button-book-now:hover {
+    color: #fff;
+}
+
+
+/*Fourth Stage End*/
