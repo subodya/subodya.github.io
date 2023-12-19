@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palms & Pearls</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/booking.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/mask@3.x.x/dist/cdn.min.js"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="/script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body class="booking-body" x-data="{ step: 1 }">
+    <div class="header">
+        
+        <nav id="navbar">
+            <div class="logo">
+                <a href="/html/index.html" class="logo">
+                    <img src="../assets/images/logo_black.png" alt="palmsandpearls">
+                </a>
+            </div>
+            <ul id="menu">
+                <li><a href="/html/index.html" class="active">HOME</a></li>
+                <li><a href="/html/hotels.html">HOTELS</a></li>
+                <li class="dropdown">
+                    <a href="#">RESTAURANT</a>
+                    <div class="dropdown-content">
+                        <a href="/html/restaurant.html">DINING</a>
+                        <a href="/html/event-1.html">WEDDINGS</a>
+                        <a href="/html/event-2.html">BBQ NIGHTS</a>
+
+                    </div>
+                </li>
+                <li><a href="/html/experience.html">EXPERIENCES</a></li>
+            </ul>
+
+            <ul class="booking-button">
+                <li><a href="/html/booking.html">MAKE A BOOKING</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Booking Page First Stage -->
+    <div x-show="step === 1" class="step-container">
+        
+        <div class="step-header">Guest Information</div>
+        <!-- Step 1 Content -->
+            <form class="form-1">
+                <div class="form-group">
+                    <label for="title" class="form-label details">Title</label>
+                    <select id="title" class="form-input">
+                        <option value="mr">Mr.</option>
+                        <option value="mrs">Mrs.</option>
+                        <option value="ms">Ms.</option>
+                        <option value="miss">Miss</option>
+                    </select>
+                </div>
+
+                <div class="form-group flex">
+                    <label for="nationality" class="form-label details">Nationality</label>
+                    <select id="nationality" class="form-input ml-2">
+                        <option value="" disabled selected>Select Nationality</option>
+                        <option value="sri_lankan">Sri Lankan</option>
+                        <option value="afghan">Afghan</option>
+                        <option value="albanian">Albanian</option>
+                        <option value="algerian">Algerian</option>
+                        <option value="american">American</option>
+                        <option value="andorran">Andorran</option>
+                        <option value="angolan">Angolan</option>
+                        <option value="antiguans">Antiguans</option>
+                        <option value="argentinean">Argentinean</option>
+                        <option value="armenian">Armenian</option>
+                        <option value="australian">Australian</option>
+                        <option value="austrian">Austrian</option>
+                        <option value="azerbaijani">Azerbaijani</option>
+                        <option value="bahamian">Bahamian</option>
+                        <option value="bahraini">Bahraini</option>
+                        <option value="bangladeshi">Bangladeshi</option>
+                        <option value="barbadian">Barbadian</option>
+                        <option value="barbudans">Barbudans</option>
+                        <option value="batswana">Batswana</option>
+                        <option value="belarusian">Belarusian</option>
+                        <option value="belgian">Belgian</option>
+                        <option value="belizean">Belizean</option>
+                        <option value="beninese">Beninese</option>
+                        <option value="bhutanese">Bhutanese</option>
+                        <option value="bolivian">Bolivian</option>
+                        <option value="bosnian">Bosnian</option>
+                        <option value="brazilian">Brazilian</option>
+                        <option value="british">British</option>
+                        <option value="bruneian">Bruneian</option>
+                        <option value="bulgarian">Bulgarian</option>
+                        <option value="burkinabe">Burkinabe</option>
+                        <option value="burmese">Burmese</option>
+                        <option value="burundian">Burundian</option>
+                        <option value="cambodian">Cambodian</option>
+                        <option value="cameroonian">Cameroonian</option>
+                        <option value="canadian">Canadian</option>
+                        <option value="cape verdean">Cape Verdean</option>
+                        <option value="central african">Central African</option>
+                        <option value="chadian">Chadian</option>
+                        <option value="chilean">Chilean</option>
+                        <option value="chinese">Chinese</option>
+                        <option value="colombian">Colombian</option>
+                        <option value="comoran">Comoran</option>
+                        <option value="congolese">Congolese</option>
+                        <option value="costa rican">Costa Rican</option>
+                        <option value="croatian">Croatian</option>
+                        <option value="cuban">Cuban</option>
+                        <option value="cypriot">Cypriot</option>
+                        <option value="czech">Czech</option>
+                        <option value="danish">Danish</option>
+                        <option value="djibouti">Djibouti</option>
+                        <option value="dominican">Dominican</option>
+                        <option value="dutch">Dutch</option>
+                        <option value="east timorese">East Timorese</option>
+                        <option value="ecuadorean">Ecuadorean</option>
+                        <option value="egyptian">Egyptian</option>
+                        <option value="emirian">Emirian</option>
+                        <option value="equatorial guinean">Equatorial Guinean</option>
+                        <option value="eritrean">Eritrean</option>
+                        <option value="estonian">Estonian</option>
+                        <option value="ethiopian">Ethiopian</option>
+                        <option value="fijian">Fijian</option>
+                        <option value="filipino">Filipino</option>
+                        <option value="finnish">Finnish</option>
+                        <option value="french">French</option>
+                        <option value="gabonese">Gabonese</option>
+                        <option value="gambian">Gambian</option>
+                        <option value="georgian">Georgian</option>
+                        <option value="german">German</option>
+                        <option value="ghanaian">Ghanaian</option>
+                        <option value="greek">Greek</option>
+                        <option value="grenadian">Grenadian</option>
+                        <option value="guatemalan">Guatemalan</option>
+                        <option value="guinea-bissauan">Guinea-Bissauan</option>
+                        <option value="guinean">Guinean</option>
+                        <option value="guyanese">Guyanese</option>
+                        <option value="haitian">Haitian</option>
+                        <option value="herzegovinian">Herzegovinian</option>
+                        <option value="honduran">Honduran</option>
+                        <option value="hungarian">Hungarian</option>
+                        <option value="icelander">Icelander</option>
+                        <option value="indian">Indian</option>
+                        <option value="indonesian">Indonesian</option>
+                        <option value="iranian">Iranian</option>
+                        <option value="iraqi">Iraqi</option>
+                        <option value="irish">Irish</option>
+                        <option value="israeli">Israeli</option>
+                        <option value="italian">Italian</option>
+                        <option value="ivorian">Ivorian</option>
+                        <option value="jamaican">Jamaican</option>
+                        <option value="japanese">Japanese</option>
+                        <option value="jordanian">Jordanian</option>
+                        <option value="kazakhstani">Kazakhstani</option>
+                        <option value="kenyan">Kenyan</option>
+                        <option value="kittian and nevisian">Kittian and Nevisian</option>
+                        <option value="kuwaiti">Kuwaiti</option>
+                        <option value="kyrgyz">Kyrgyz</option>
+                        <option value="laotian">Laotian</option>
+                        <option value="latvian">Latvian</option>
+                        <option value="lebanese">Lebanese</option>
+                        <option value="liberian">Liberian</option>
+                        <option value="libyan">Libyan</option>
+                        <option value="liechtensteiner">Liechtensteiner</option>
+                        <option value="lithuanian">Lithuanian</option>
+                        <option value="luxembourger">Luxembourger</option>
+                        <option value="macedonian">Macedonian</option>
+                        <option value="malagasy">Malagasy</option>
+                        <option value="malawian">Malawian</option>
+                        <option value="malaysian">Malaysian</option>
+                        <option value="maldivan">Maldivan</option>
+                        <option value="malian">Malian</option>
+                        <option value="maltese">Maltese</option>
+                        <option value="marshallese">Marshallese</option>
+                        <option value="mauritanian">Mauritanian</option>
+                        <option value="mauritian">Mauritian</option>
+                        <option value="mexican">Mexican</option>
+                        <option value="micronesian">Micronesian</option>
+                        <option value="moldovan">Moldovan</option>
+                        <option value="monacan">Monacan</option>
+                        <option value="mongolian">Mongolian</option>
+                        <option value="moroccan">Moroccan</option>
+                        <option value="mosotho">Mosotho</option>
+                        <option value="motswana">Motswana</option>
+                        <option value="mozambican">Mozambican</option>
+                        <option value="namibian">Namibian</option>
+                        <option value="nauruan">Nauruan</option>
+                        <option value="nepalese">Nepalese</option>
+                        <option value="new zealander">New Zealander</option>
+                        <option value="ni-vanuatu">Ni-Vanuatu</option>
+                        <option value="nicaraguan">Nicaraguan</option>
+                        <option value="nigerien">Nigerien</option>
+                        <option value="north korean">North Korean</option>
+                        <option value="northern irish">Northern Irish</option>
+                        <option value="norwegian">Norwegian</option>
+                        <option value="omani">Omani</option>
+                        <option value="pakistani">Pakistani</option>
+                        <option value="palauan">Palauan</option>
+                        <option value="panamanian">Panamanian</option>
+                        <option value="papua new guinean">Papua New Guinean</option>
+                        <option value="paraguayan">Paraguayan</option>
+                        <option value="peruvian">Peruvian</option>
+                        <option value="polish">Polish</option>
+                        <option value="portuguese">Portuguese</option>
+                        <option value="qatari">Qatari</option>
+                        <option value="romanian">Romanian</option>
+                        <option value="russian">Russian</option>
+                        <option value="rwandan">Rwandan</option>
+                        <option value="saint lucian">Saint Lucian</option>
+                        <option value="salvadoran">Salvadoran</option>
+                        <option value="samoan">Samoan</option>
+                        <option value="san marinese">San Marinese</option>
+                        <option value="sao tomean">Sao Tomean</option>
+                        <option value="saudi">Saudi</option>
+                        <option value="scottish">Scottish</option>
+                        <option value="senegalese">Senegalese</option>
+                        <option value="serbian">Serbian</option>
+                        <option value="seychellois">Seychellois</option>
+                        <option value="sierra leonean">Sierra Leonean</option>
+                        <option value="singaporean">Singaporean</option>
+                        <option value="slovakian">Slovakian</option>
+                        <option value="slovenian">Slovenian</option>
+                        <option value="solomon islander">Solomon Islander</option>
+                        <option value="somali">Somali</option>
+                        <option value="south african">South African</option>
+                        <option value="south korean">South Korean</option>
+                        <option value="spanish">Spanish</option>
+                        <option value="sudanese">Sudanese</option>
+                        <option value="surinamer">Surinamer</option>
+                        <option value="swazi">Swazi</option>
+                        <option value="swedish">Swedish</option>
+                        <option value="swiss">Swiss</option>
+                        <option value="syrian">Syrian</option>
+                        <option value="taiwanese">Taiwanese</option>
+                        <option value="tajik">Tajik</option>
+                        <option value="tanzanian">Tanzanian</option>
+                        <option value="thai">Thai</option>
+                        <option value="togolese">Togolese</option>
+                        <option value="tongan">Tongan</option>
+                        <option value="tobagonian">Tobagonian</option>
+                        <option value="tunisian">Tunisian</option>
+                        <option value="turkish">Turkish</option>
+                        <option value="tuvaluan">Tuvaluan</option>
+                        <option value="ugandan">Ugandan</option>
+                        <option value="ukrainian">Ukrainian</option>
+                        <option value="uruguayan">Uruguayan</option>
+                        <option value="uzbekistani">Uzbekistani</option>
+                        <option value="venezuelan">Venezuelan</option>
+                        <option value="vietnamese">Vietnamese</option>
+                        <option value="welsh">Welsh</option>
+                        <option value="yemenite">Yemenite</option>
+                        <option value="zambian">Zambian</option>
+                        <option value="zimbabwean">Zimbabwean</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="firstName" class="form-label details">First Name</label>
+                    <input type="text" id="firstName" class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName" class="form-label details">Last Name</label>
+                    <input type="text" id="lastName" class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label for="phoneNumber" class="form-label details">Phone Number</label>
+                    <input type="tel" id="phoneNumber" class="form-input" placeholder="+94-000-000-000">
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label details">Email</label>
+                    <input type="email" id="email" class="form-input" placeholder="palmsandpearls@gmail.com">
+                </div>
+            </form>
+            <div class="button-container">
+                <!-- Previous Button -->
+                <button @click="step -= 1" class="button button-prev" x-show="step > 1">Previous</button>
+                <!-- Next Button -->
+                <button @click="step += 1" class="button button-next">Next</button>
+            </div>
+    </div>
+        <!-- Booking Page First Stage End -->
+
+        <!-- Booking Page Second Stage Start -->
+        <div x-show="step === 2" class="step-container">
+            <!-- Step 2 Content -->
+            
+                <form class="form-2">
+                        <div class="step-header">Accommodation</div>
+                        <div class="input-box">
+                            <span class="details">Check-In Date & Time</span>
+                            <input type="datetime-local">
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Check-Out Date & Time</span>
+                            <input type="datetime-local">
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Room Types</span>
+                            <div class="room-checkboxes">
+                                <div class="room-checkbox">
+                                    <input type="checkbox" id="standardDouble" class="room-checkbox-input">
+                                    <label for="standardDouble" class="room-checkbox-label">Standard Double</label>
+                                    <input x-model="booking.roomTypes.standardDouble.quantity" type="number" class="room-input" id="standardDoubleInput" min="0" placeholder="No. of Rooms (Single)">
+                                </div>
+                                <div class="room-checkbox">
+                                    <input type="checkbox" id="deluxeQueen" class="room-checkbox-input">
+                                    <label for="deluxeQueen" class="room-checkbox-label">Deluxe Queen</label>
+                                    <input x-model="booking.roomTypes.deluxeQueen.quantity" type="number" class="room-input" id="deluxeQueenInput" min="0" placeholder="No. of Rooms (Double)">
+                                </div>
+                                <div class="room-checkbox">
+                                    <input type="checkbox" id="honeymoonSuite" class="room-checkbox-input">
+                                    <label for="honeymoonSuite" class="room-checkbox-label">Honeymoon Suite</label> 
+                                    <input x-model="booking.roomTypes.honeymoonSuite.quantity" type="number" class="room-input" id="honeymoonSuiteInput" min="0" placeholder="No. of Rooms (Triple)">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="input-box">
+                            <div class="form-group">
+                                <label for="number-of-adults" class="form-label details">No. of Adults</label>
+                                <input x-model="booking.number_of_adults" type="number" class="form-control"
+                                    id="number-of-adults"min="0" />
+                            </div>
+                            <div class="form-group">
+                                <label for="number-of-children" class="form-label details">No. of Children</label>
+                                <input x-model="booking.number_of_children" type="number" class="form-control"
+                                    id="number-of-children" min="0"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="number-of-children" class="form-label details">Extra Bed</label>
+                                <input x-model="booking.extra_bed" type="number" class="form-control"
+                                    id="number-of-children" min="0"/>
+                            </div>
+                        </div>    
+                </form>
+            <div class="button-container">
+                <!-- Previous Button -->
+                <button @click="step -= 1" class="button button-prev">Previous</button>
+                <!-- Next Button -->
+                <button @click="step += 1" class="button button-next">Next</button>
+            </div>
+        </div>       
+        <!-- Booking Page Second Stage End -->
+
+        <!-- Booking Page Third Stage Start -->
+    <div x-show="step === 3" class="step-container">
+        <!-- Step 3 Content -->
+            <form class="form-3">
+                <div class="step-header">Diving Adventure</div>    
+                <div class="input-box">
+                    <div class="form-group">
+                        <label for="number-of-adults-local" class="form-label details">Local Adults</label>
+                        <input x-model="booking.adventure.number_of_adults_local" type="number" class="form-control"
+                            id="number-of-adults-local" min="0"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="number-of-children-local" class="form-label details">Local Children</label>
+                        <input x-model="booking.adventure.number_of_children_local" type="number" 
+                            class="form-control" id="number-of-children-local" min="0"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="number-of-adults-foreign" class="form-label details">Foreign Adults</label>
+                        <input x-model="booking.adventure.number_of_adults_foreign" type="number"
+                            class="form-control" id="number-of-adults-foreign" min="0" />
+                    </div>
+                    <div class="form-group">
+                        <label for="number-of-children-foreign" class="form-label details">Foreign Children</label>
+                        <input x-model="booking.adventure.number_of_children_foreign" type="number"
+                            class="form-control" id="number-of-children-foreign" min="0" />
+                    </div>
+
+                    <div class="col-6 row">
+                        <div class="form-group">
+                            <label for="adult-guide" class="form-label details">Adult Guide</label>
+                            <input x-model="booking.adventure.adult_guide" type="number" class="form-control"
+                                id="adult-guide" min="0"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="child-guide" class="form-label details">Child Guide</label>
+                            <input x-model="booking.adventure.child_guide" type="number" class="form-control"
+                                id="child-guide"min="0"/>
+                        </div>
+                    </div>
+
+
+                </div>
+            </form>
+        <div class="button-container">
+            <!-- Previous Button -->
+            <button @click="step -= 1" class="button button-prev">Previous</button>
+            <!-- Next Button -->
+            <button @click="step += 1" class="button button-next">Next</button>
+        </div>
+    </div>
+        <!-- Booking Page Third Stage End -->
+
+        <!-- Booking Page Fourth Stage Start -->
+<!-- Booking Page Fourth Stage Start -->
+<div x-show="step === 4" class="step-container">
+    <!-- Step 4 Content -->
+    <form class="form-4">
+        <div class="step-header">Payment Information</div>
+        <div class="input-box">
+            <label class="details">Card Holder's Name</label>
+            <input type="text" id="cardHolderName" class="form-input" placeholder="Ranjan Ramanayake">
+        </div>
+        <div class="input-box">
+            <label class="details">Card Number</label>
+            <input type="text" id="cardNumber" class="form-input" placeholder="**** **** **** ****" maxlength="19">
+        </div>
+        <!-- Credit Card Number Formatting Script -->
+        <script>
+            document.getElementById('cardNumber').addEventListener('input', function (e) {
+                // Remove non-numeric characters
+                let input = e.target.value.replace(/\D/g, '');
+        
+                // Insert hyphens every 4 digits
+                if (input.length > 0) {
+                    input = input.match(/.{1,4}/g).join('-');
+                }
+        
+                // Update the input value
+                e.target.value = input.slice(0, 19);
+            });
+        </script>
+        <div class="flex-container">
+            <div class="input-box">
+                <label class="details">Expiration Date</label>
+                <input type="text" id="expirationDate" class="form-input short-input" placeholder="MM/YY" maxlength="5">
+            </div>
+            <!-- Expiration Date Formatting Script -->
+            <script>
+            document.getElementById('expirationDate').addEventListener('input', function (e) {
+                // Remove non-numeric characters
+                let input = e.target.value.replace(/\D/g, '');
+        
+                // Format the expiration date as MM/YY
+                if (input.length > 2) {
+                    input = input.slice(0, 2) + '/' + input.slice(2);
+                }
+        
+                // Update the input value
+                e.target.value = input.slice(0, 5);
+            });
+            </script>
+            <div class="input-box">
+                <label class="details">CVV</label>
+                <input type="text" id="cvv" class="form-input short-input" placeholder="***" maxlength="3">
+            </div>
+        </div>
+    </form>
+    <div class="button-container">
+        <!-- Previous Button -->
+        <button @click="step -= 1" class="button button-prev">Previous</button>
+        <!-- Book Now Button -->
+        <button @click="step += 1" class="button button-book-now">Book Now</button>
+    </div>
+</div>
+<!-- Booking Page Fourth Stage End -->
+
+<!-- Booking Page Fifth Stage (Reservation Summary) Start -->
+<div x-show="step === 5" class="step-container">
+    <div class="step-header">Reservation Summary</div>
+    
+    <table>
+        <tr>
+            <td>Room Cost</td>
+            <td x-text="roomCost"></td>
+        </tr>
+        <tr>
+            <td>Adventure Cost</td>
+            <td x-text="_app.total_adventure_cost"></td>
+        </tr>
+        <tr>
+            <td>Total Cost</td>
+            <td x-text="_app.total_cost"></td>
+        </tr>
+        <tr>
+            <td>Total Discount</td>
+            <td x-text="_app.booking.total_discount"></td>
+        </tr>
+        <tr>
+            <td>Final Total</td>
+            <td x-text="_app.booking.final_total"></td>
+        </tr>
+    </table>
+    <script>
+        function createSummaryData() {
+            return {
+                roomCost: _app.booking.room_cost,
+                totalAdventureCost: _app.total_adventure_cost,
+                totalCost: _app.total_cost,
+                totalDiscount: _app.booking.total_discount,
+                finalTotal: _app.booking.final_total,
+            };
+        }
+    </script>
+    <!-- Previous Button -->
+    <button @click="step -= 1" class="button button-prev">Previous</button>
+</div>
+<!-- Booking Page Fifth Stage (Reservation Summary) End -->
+
+    <footer>
+        <div class="footer_info">
+            <div class="footer_width about">
+                <h2>About</h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, itaque. Omnis perferendis ex dolorum reiciendis ab aliquid voluptates maxime! Odio, asperiores corrupti. Sapiente, soluta nisi eos reiciendis dolore quae alias!
+                </p>
+                <div class="social-media">
+                    <ul>
+                        <li><a href="#"><i class="fab  fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab  fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fab  fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_width link">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="/html/index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>   
+                </ul>
+            </div>
+            <div class="footer_width contact">
+                <h2>Contact</h2>
+                <ul>
+                    <li>
+                        <span><i class="fa-solid fa-location-dot fa-lg"></i></span>
+                        <p>
+                            303 Lenin Mawatha, Uppuveli Rd,Trincomalee
+                        </p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope fa-lg"></i></span>
+                        <a href="#">palmsandpearls@gmail.com</a>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-phone fa-lg"></i></span>
+                        <a href="#">011 9999 888</a>
+                    </li>
+                </ul>
+            </div>
+        </div>        
+    </footer>
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('_app', () => ({
+
+                coupons: [
+                    'Promo123',
+                ],
+
+                past_bookings: [],
+
+                favorites: [],
+
+                loyality_points: 0,
+
+                booking: {
+                    checkin: null,
+                    checkout: null,
+                    roomTypes: {
+                    standardDouble: { selected: false, quantity: 0 },
+                    deluxeQueen: { selected: false, quantity: 0 },
+                    honeymoonSuite: { selected: false, quantity: 0 },
+                    },
+
+                    number_of_rooms: 0,
+                    number_of_adults: 0,
+                    number_of_children: 0,
+                    extra_bed: 0,
+                    promo_code: null,
+
+                    // adventure
+                    adventure: {
+                        number_of_adults_local: 0,
+                        number_of_adults_foreign: 0,
+                        number_of_children_local: 0,
+                        number_of_children_foreign: 0,
+                        adult_guide: 0,
+                        child_guide: 0
+                    },
+
+                    customer: {
+                        name: null,
+                        email: null,
+                        phone: null,
+                        address: null,
+                        city: null,
+                        country: null,
+                        postal_code: null,
+
+                        // card details
+                        card_number: null,
+                        card_holder: null,
+                        expiry_date: null,
+                    },
+
+                    // final calculations
+                    total_cost: 0,
+                    discount_percentage: 0,
+                    total_discount: 0,
+                    final_total: 0,
+                    final_adventure_cost: 0
+                },
+
+                get total_adventure_cost() {
+                    let total = 0;
+                    total += this.booking.adventure.number_of_adults_local * 1000;
+                    total += this.booking.adventure.number_of_adults_foreign * 2000;
+                    total += this.booking.adventure.number_of_children_local * 500;
+                    total += this.booking.adventure.number_of_children_foreign * 1000;
+                    total += this.booking.adventure.adult_guide * 1000;
+                    total += this.booking.adventure.child_guide * 500;
+                    this.booking.final_adventure_cost = total;
+                    return total;
+                },
+
+                get total_cost() {
+                    let total = 0;
+                    total += this.booking.room_cost * this.booking.number_of_rooms;
+                    total += this.total_adventure_cost;
+                    this.booking.total_cost = total;
+
+                    // calculate discount
+                    this.booking.total_discount = total * (this.booking.discount_percentage / 100);
+
+                    // calculate final total
+                    this.booking.final_total = total - this.booking.total_discount;
+
+                    return total;
+                },
+
+                goToCheckout() {
+                    // change the step to 2 (checkout)
+                    this.step = 2;
+
+                    // save the booking to localstorage
+                    localStorage.setItem('booking', JSON.stringify(this.booking));
+                },
+
+                completeBooking() {
+
+                    this.step = 4;
+
+                    // if the booking has more than 3 rooms add 20 loyality points
+                    if (this.booking.number_of_rooms > 3) {
+                        this.loyality_points += 20;
+                    }
+
+                    // save the loyality points to localstorage
+                    localStorage.setItem('loyality_points', this.loyality_points);
+
+                    // add the booking to past bookings
+                    this.past_bookings.push(this.booking);
+
+                    // save the past_bookings to localstorage
+                    localStorage.setItem('past_bookings', JSON.stringify(this.past_bookings));
+
+                    // clear the booking
+                    this.booking = {
+                        checkin: null,
+                        checkout: null,
+                        room_cost: 0,
+                        number_of_rooms: 0,
+                        number_of_adults: 0,
+                        number_of_children: 0,
+                        extra_bed: 0,
+                        promo_code: null,
+
+                        // adventure
+                        adventure: {
+                            number_of_adults_local: 0,
+                            number_of_adults_foreign: 0,
+                            number_of_children_local: 0,
+                            number_of_children_foreign: 0,
+                            adult_guide: 0,
+                            child_guide: 0
+                        },
+
+                        customer: {
+                            name: null,
+                            email: null,
+                            phone: null,
+                            address: null,
+                            city: null,
+                            country: null,
+                            postal_code: null,
+
+                            // card details
+                            card_number: null,
+                            card_holder: null,
+                            expiry_date: null,
+                        },
+
+                        // final calculations
+                        total_cost: 0,
+                        discount_percentage: 0,
+                        total_discount: 0,
+                        final_total: 0,
+                        final_adventure_cost: 0
+                    };
+
+                    // clear the booking from localstorage
+                    localStorage.removeItem('booking');
+                },
+
+                bookFavorite(index) {
+                    // clear the booking from localstorage
+                    localStorage.removeItem('booking');
+
+                    this.booking = this.favorites[index];
+                    
+                    this.step = 1;
+                },
+
+                addToFavorites() {
+                    this.step = 3;
+
+                    // add the booking to past bookings
+                    this.favorites.push(this.booking);
+
+                    // save the favorites to localstorage
+                    localStorage.setItem('favorites', JSON.stringify(this.favorites));
+
+                    // clear the booking
+                    this.booking = {
+                        checkin: null,
+                        checkout: null,
+                        room_cost: 0,
+                        number_of_rooms: 0,
+                        number_of_adults: 0,
+                        number_of_children: 0,
+                        extra_bed: 0,
+                        promo_code: null,
+
+                        // adventure
+                        adventure: {
+                            number_of_adults_local: 0,
+                            number_of_adults_foreign: 0,
+                            number_of_children_local: 0,
+                            number_of_children_foreign: 0,
+                            adult_guide: 0,
+                            child_guide: 0
+                        },
+
+                        customer: {
+                            name: null,
+                            email: null,
+                            phone: null,
+                            address: null,
+                            city: null,
+                            country: null,
+                            postal_code: null,
+
+                            // card details
+                            card_number: null,
+                            card_holder: null,
+                            expiry_date: null,
+                        },
+
+                        // final calculations
+                        total_cost: 0,
+                        discount_percentage: 0,
+                        total_discount: 0,
+                        final_total: 0,
+                        final_adventure_cost: 0
+                    };
+
+                    // clear the booking from localstorage
+                    localStorage.removeItem('booking');
+                },
+
+                checkLoyaltyPoints() {
+
+                },
+
+                init() {
+                    // set booking checkin date to today
+                    this.booking.checkin = new Date().toISOString().slice(0, 10);
+
+                    // set booking checkout date to tomorrow
+                    let tomorrow = new Date();
+
+
+                    // watch booking.promo_code for changes and check if the code exists in the coupons array
+                    this.$watch('booking.promo_code', (value) => {
+                        if (this.coupons.includes(value)) {
+                            // alert('Coupon Applied');
+                            this.booking.discount_percentage = 10;
+                        } else {
+                            this.booking.discount_percentage = 0;
+                        }
+                    });
+
+                    // check if there is a booking in localstorage and load it
+                    if (localStorage.getItem('booking')) {
+                        this.booking = JSON.parse(localStorage.getItem('booking'));
+                    }
+
+                    // check if there are past bookings in localstorage and load it
+                    if (localStorage.getItem('past_bookings')) {
+                        this.past_bookings = JSON.parse(localStorage.getItem('past_bookings'));
+                    }
+
+                    // check if there are past bookings in localstorage and load it
+                    if (localStorage.getItem('favorites')) {
+                        this.favorites = JSON.parse(localStorage.getItem('favorites'));
+                    }
+
+                    // check if there are loyality_points in localstorage and load it
+                    if (localStorage.getItem('loyality_points')) {
+                        this.loyality_points = parseInt(localStorage.getItem('loyality_points'));
+                    }
+
+                }
+
+            }));
+        })
+    </script>
+</body>
+</html>
